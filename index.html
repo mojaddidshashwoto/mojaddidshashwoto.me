@@ -1,488 +1,417 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <script type="application/ld+json">
-{"@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Mojaddid Shashwoto",
-  "url": "https://mojaddidshashwoto.me/",
-  "image": "https://avatars.githubusercontent.com/u/251911880?v=4",
-  "jobTitle": [
-    "Photographer",
-    "Business Planner",
-    "Creative Consultant",
-    "Graphic Designer"
-  ],
-  "sameAs": [
-    "https://www.linkedin.com/in/mojaddid-shashwoto/",
-    "https://github.com/mojaddidshashwoto"
-  ]
-}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Mojaddid Shashwoto | Digital Product Strategist</title>
+    <meta name="title" content="Mojaddid Shashwoto | Digital Product Strategist">
+    <meta name="description"
+        content="Bridging the gap between abstract business vision and executable digital products through rapid prototyping, UI/UX design, and rigorous market analysis.">
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mojaddid Shashwoto — Photographer · Business Planner · Creative Consultant · Graphic Designer</title>
-  <meta name="description" content="Mojaddid Shashwoto — photographer, creative consultant and business planner delivering strategic visual storytelling and brand systems that drive measurable outcomes." />
-  <link rel="canonical" href="https://mojaddidshashwoto.me/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Mojaddid Shashwoto — Photographer & Creative Consultant">
-  <meta property="og:description" content="Strategic visual storytelling, brand systems, and business planning for creative ventures and organisations.">
-  <meta property="og:url" content="https://mojaddidshashwoto.me/">
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/251911880?v=4">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mojaddid Shashwoto — Photographer & Creative Consultant">
-  <meta name="twitter:description" content="Strategic visual storytelling, brand systems, and business planning for creative ventures and organisations.">
-  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/251911880?v=4">
-
-  <!-- Favicon (simple SVG data URI) -->
-  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%225%22 fill=%22%232b2f36%22/><text x=%2216%22 y=%2219%22 font-size=%2212%22 text-anchor=%22middle%22 fill=%22%23ffffff%22 font-family=%22Inter%2Csystem-ui%2C-sans-serif%22>MS</text></svg>'>
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    /*
-      Production-ready single-file CSS
-      - Neutral palette with a single accent
-      - Clear typographic scale
-      - Card-based layout, accessible controls
-    */
-
-    :root{
-      /* Colors */
-      --bg: #0b0f14;            /* very dark neutral background */
-      --surface: #0f1720;       /* card surface */
-      --muted: #98a0ae;         /* supportive text */
-      --text: #e6eef6;          /* primary text */
-      --accent: #2f6fd6;        /* single accent color (muted blue) */
-      --accent-600: #2359b4;
-      --glass: rgba(255,255,255,0.02);
-      --focus: rgba(47,111,214,0.18);
-
-      /* Spacing scale (8px base) */
-      --space-xs: 4px;
-      --space-sm: 8px;
-      --space: 16px;
-      --space-lg: 24px;
-      --space-xl: 40px;
-
-      /* Typography scale */
-      --font-sans: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      --h1: 2.25rem;   /* 36px */
-      --h2: 1.125rem;  /* 18px (section headings smaller to be balanced) */
-      --h3: 1rem;      /* 16px */
-      --lead: 1rem;    /* 16px */
-      --body: 0.95rem; /* 15px */
-      --radius: 12px;
-      --container: 1100px;
-    }
-
-    /* Reset & base */
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:var(--font-sans);
-      background: linear-gradient(180deg,var(--bg) 0%, #071026 100%);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      font-size:var(--body);
-    }
-
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;display:block}
-
-    .page{
-      max-width:var(--container);
-      margin:0 auto;
-      padding:calc(var(--space) + 8px);
-    }
-
-    /* Header / Navigation (minimal) */
-    header.site-header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:var(--space);
-      margin-bottom:var(--space-xl);
-      align-items:center;
-    }
-    .brand{
-      display:flex;
-      gap:12px;
-      align-items:center;
-    }
-    .brand .logo{
-      width:48px;height:48px;border-radius:10px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--text);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    }
-    .brand .site-title{
-      display:flex;flex-direction:column;
-    }
-    .site-title .name{font-size:1rem;font-weight:700;letter-spacing:0.2px}
-    .site-title .role{font-size:0.85rem;color:var(--muted);margin-top:2px}
-
-    /* Hero */
-    .hero{
-      display:grid;
-      grid-template-columns: 1fr 220px;
-      gap:var(--space-lg);
-      align-items:center;
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.007));
-      border-radius:var(--radius);
-      padding:var(--space-lg);
-      box-shadow: 0 14px 40px rgba(2,6,23,0.6);
-    }
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr; padding:20px}
-    }
-
-    .hero .headline{
-      max-width:70ch;
-    }
-    h1.display{
-      margin:0 0 8px 0;
-      font-size:var(--h1);
-      line-height:1.05;
-      font-weight:800;
-      letter-spacing:-0.4px;
-      color:var(--text);
-    }
-    p.subtitle{
-      margin:0 0 var(--space) 0;
-      color:var(--muted);
-      font-size:var(--lead);
-      max-width:56ch;
-    }
-
-    /* CTA buttons */
-    .ctas{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      margin-top:8px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius:10px;
-      font-weight:700;
-      font-size:0.95rem;
-      cursor:pointer;
-      transition:transform .12s ease, box-shadow .12s ease, background-color .12s ease;
-      border: none;
-      text-decoration:none;
-    }
-    .btn:focus{outline:3px solid var(--focus); outline-offset:2px}
-    .btn-primary{
-      background: linear-gradient(180deg,var(--accent) 0%, var(--accent-600) 100%);
-      color:#fff;
-      box-shadow: 0 6px 18px rgba(47,111,214,0.15);
-    }
-    .btn-primary:hover{transform:translateY(-2px)}
-    .btn-secondary{
-      background: transparent;
-      color:var(--text);
-      border:1px solid rgba(255,255,255,0.06);
-    }
-    .btn-secondary:hover{background:rgba(255,255,255,0.02)}
-
-    /* Avatar */
-    .hero .avatar-wrap{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .avatar{
-      width:160px;
-      height:160px;
-      border-radius:18px;
-      overflow:hidden;
-      border:2px solid rgba(255,255,255,0.04);
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    }
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-
-    /* Main layout */
-    .layout{
-      display:grid;
-      grid-template-columns: 1fr 320px;
-      gap:var(--space-lg);
-      margin-top:var(--space-lg);
-    }
-    @media (max-width:1000px){
-      .layout{grid-template-columns:1fr}
-    }
-
-    /* Cards */
-    .card{
-      background:var(--surface);
-      border-radius:12px;
-      padding:18px;
-      box-shadow: 0 8px 24px rgba(2,6,23,0.45);
-      border: 1px solid rgba(255,255,255,0.02);
-    }
-    .card h2{margin:0 0 12px 0;font-size:var(--h2);font-weight:700;color:var(--text)}
-    .muted{color:var(--muted);font-size:0.95rem}
-
-    /* About */
-    .about p{margin:0 0 12px 0;color:var(--muted);line-height:1.6;font-size:var(--body)}
-
-    /* Skills (card grid inside a card) */
-    .skills-grid{
-      display:grid;
-      grid-template-columns: repeat(2,1fr);
-      gap:12px;
-    }
-    @media (max-width:420px){ .skills-grid{ grid-template-columns:1fr } }
-    .skill-pill{
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.007));
-      padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);
-      display:flex;align-items:center;gap:12px;
-    }
-    .skill-badge{
-      width:36px;height:36;border-radius:8px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;
-      box-shadow: 0 6px 12px rgba(47,111,214,0.08);
-    }
-    .skill-text{font-weight:600;color:var(--text)}
-
-    /* Projects */
-    .projects-grid{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:16px;
-    }
-    @media (max-width:860px){ .projects-grid{ grid-template-columns:1fr } }
-
-    .project-card{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      padding:18px;
-      border-radius:10px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
-      border:1px solid rgba(255,255,255,0.02);
-      min-height:160px; /* consistent card height */
-    }
-    .project-title{font-size:1.02rem;font-weight:700;color:var(--text)}
-    .project-desc{color:var(--muted);font-size:0.95rem;line-height:1.5}
-    .project-meta{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:0.85rem}
-    .project-actions{margin-top:auto;display:flex;gap:10px}
-
-    /* Aside (contact & quick links) */
-    aside .compact-list{display:flex;flex-direction:column;gap:10px}
-    .compact-list a{display:inline-block;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.02);color:var(--text);text-decoration:none;font-weight:600}
-    .compact-list a:hover{background:rgba(255,255,255,0.02)}
-
-    /* Footer */
-    footer.site-footer{margin-top:var(--space-xl);text-align:center;color:var(--muted);font-size:0.92rem;padding-bottom:12px}
-
-    /* Accessibility & reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      .btn{transition:none}
-    }
-
-    /* Utility */
-    .sr-only{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
-  </style>
+    <!-- Open Graph / LinkedIn / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mojaddidshashwoto.page.gd/">
+    <meta property="og:title" content="Mojaddid Shashwoto | Digital Product Strategist">
+    <meta property="og:description"
+        content="Bridging the gap between abstract business vision and executable digital products through rapid prototyping, UI/UX design, and rigorous market analysis.">
+    <!-- Note: To make an image appear when sharing, upload a screenshot of your site to your htdocs folder and link it below -->
+    <!-- <meta property="og:image" content="https://mojaddidshashwoto.page.gd/preview-image.jpg"> -->
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <!-- Custom SVG Favicon based on site logo -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='ms-grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F0FF'/%3E%3Cstop offset='100%25' stop-color='%238A2BE2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M 8 32 L 8 12 L 20 24 L 32 12 L 32 32' stroke='url(%23ms-grad)' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M 32 8 L 14 8 L 14 20 L 28 20 L 28 32 L 8 32' stroke='%23111111' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
 </head>
-<body>
-  <div class="page">
 
-    <header class="site-header" role="banner" aria-label="Site header">
-      <div class="brand" aria-hidden="false">
-        <div class="logo" aria-hidden="true">
-          MS
-        </div>
-        <div class="site-title">
-          <div class="name">Mojaddid Shashwoto</div>
-          <div class="role">Photographer · Business Planner · Creative Consultant · Graphic Designer</div>
-        </div>
-      </div>
+<body class="no-scroll">
 
-      <nav aria-label="Primary actions" style="display:flex;gap:12px;align-items:center">
-        <a class="btn btn-secondary" href="#projects">View Projects</a>
-        <a class="btn btn-secondary" href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero" role="region" aria-labelledby="hero-heading">
-      <div class="headline">
-        <h1 id="hero-heading" class="display">Mojaddid Shashwoto</h1>
-        <p class="subtitle">Photographer · Business Planner · Creative Consultant · Graphic Designer</p>
-
-        <p class="subtitle" style="margin-top:6px;">
-          Strategic visual storytelling and disciplined business planning that align brand identity with commercial objectives.
-        </p>
-
-        <div class="ctas" role="group" aria-label="Primary call to action">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-secondary" href="#contact">Contact Me</a>
-        </div>
-      </div>
-
-      <div class="avatar-wrap" aria-hidden="true">
-        <div class="avatar" role="img" aria-label="Mojaddid Shashwoto">
-          <img src="https://avatars.githubusercontent.com/u/251911880?v=4" alt="Mojaddid Shashwoto">
-        </div>
-      </div>
-    </section>
-
-    <!-- MAIN LAYOUT -->
-    <div class="layout" role="main">
-
-      <!-- Left column -->
-      <div>
-        <!-- About -->
-        <section class="card about" aria-labelledby="about-heading">
-          <h2 id="about-heading">About</h2>
-          <p class="muted">
-           I'm Mojaddid Shashwoto a multidisciplinary creative and business strategist.I develops cohesive brand systems, photographic narratives, and visual identities that support product and market goals.
-          </p>
-          <p class="muted">
-            Services include brand strategy, commercial photography, visual identity design, and business planning. Engagements focus on measurable outcomes: clear positioning, consistent execution, and scalable creative processes.
-          </p>
-        </section>
-
-        <!-- Skills -->
-        <section class="card" aria-labelledby="skills-heading" style="margin-top:18px">
-          <h2 id="skills-heading">Skills</h2>
-          <div class="skills-grid" role="list" aria-label="Skills">
-            <div class="skill-pill" role="listitem">
-              <div class="skill-badge" aria-hidden="true">PH</div>
-              <div>
-                <div class="skill-text">Commercial Photography</div>
-                <div class="muted" style="font-size:0.88rem;margin-top:4px">Studio & location, visual storytelling</div>
-              </div>
-            </div>
-
-            <div class="skill-pill" role="listitem">
-              <div class="skill-badge" aria-hidden="true">BS</div>
-              <div>
-                <div class="skill-text">Business Planning</div>
-                <div class="muted" style="font-size:0.88rem;margin-top:4px">Market strategy, go-to-market</div>
-              </div>
-            </div>
-
-            <div class="skill-pill" role="listitem">
-              <div class="skill-badge" aria-hidden="true">CD</div>
-              <div>
-                <div class="skill-text">Creative Direction</div>
-                <div class="muted" style="font-size:0.88rem;margin-top:4px">Campaigns, brand systems</div>
-              </div>
-            </div>
-
-            <div class="skill-pill" role="listitem">
-              <div class="skill-badge" aria-hidden="true">GD</div>
-              <div>
-                <div class="skill-text">Graphic Design</div>
-                <div class="muted" style="font-size:0.88rem;margin-top:4px">Identity, collateral, layouts</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="card" aria-labelledby="projects-heading" style="margin-top:18px">
-          <h2 id="projects-heading">Selected Projects</h2>
-
-          <p class="muted" style="margin-bottom:12px">A concise list of projects highlighting impact, stack, and links for review. (Replace placeholders with real repos and one-line outcomes.)</p>
-
-          <div class="projects-grid" role="list">
-            <!-- Project 1 -->
-            <article class="project-card" role="listitem" aria-labelledby="p1">
-              <div>
-                <div id="p1" class="project-title">Project Alpha — Scalable API</div>
-                <div class="project-desc">Designed and implemented a REST API service to support high-throughput client requests with observability and rate limiting. Reduced median response time by 40%.</div>
-                <div class="project-meta">Node.js • Express • PostgreSQL</div>
-              </div>
-              <div class="project-actions" aria-hidden="false">
-                <a class="btn btn-primary" href="#" aria-label="View Project Alpha">View Project</a>
-                <a class="btn btn-secondary" href="#" aria-label="Project Alpha GitHub">GitHub</a>
-              </div>
-            </article>
-
-            <!-- Project 2 -->
-            <article class="project-card" role="listitem" aria-labelledby="p2">
-              <div>
-                <div id="p2" class="project-title">Project Beta — Product Analytics</div>
-                <div class="project-desc">Built a lightweight analytics pipeline to capture product events and produce near-real-time dashboards for stakeholders.</div>
-                <div class="project-meta">Python • Kafka • Looker</div>
-              </div>
-              <div class="project-actions">
-                <a class="btn btn-primary" href="#" aria-label="View Project Beta">View Project</a>
-                <a class="btn btn-secondary" href="#" aria-label="Project Beta GitHub">GitHub</a>
-              </div>
-            </article>
-
-            <!-- Project 3 -->
-            <article class="project-card" role="listitem" aria-labelledby="p3">
-              <div>
-                <div id="p3" class="project-title">Project Gamma — Frontend Platform</div>
-                <div class="project-desc">Led the front-end rework of a customer-facing dashboard using component-driven architecture, improving onboarding conversion by X%.</div>
-                <div class="project-meta">React • TypeScript • Storybook</div>
-              </div>
-              <div class="project-actions">
-                <a class="btn btn-primary" href="#" aria-label="View Project Gamma">View Project</a>
-                <a class="btn btn-secondary" href="#" aria-label="Project Gamma GitHub">GitHub</a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-      </div>
-
-      <!-- Right column / Aside -->
-      <aside>
-        <section id="contact" class="card" aria-labelledby="contact-heading">
-          <h2 id="contact-heading">Contact</h2>
-
-          <p class="muted" style="margin-bottom:12px">Open to client engagements, consultancy, and strategic partnerships. Contact to discuss project scope and availability.</p>
-
-          <div class="compact-list" role="list">
-            <a href="mailto:sasotomujaddid@gmail.com" aria-label="Email">sasotomujaddid@gmail.com</a>
-            <a href="https://www.linkedin.com/in/mojaddid-shashwoto/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-            <a href="https://github.com/mojaddidshashwoto" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-          </div>
-        </section>
-
-        <section class="card" style="margin-top:18px">
-          <h2>Quick Info</h2>
-          <div class="muted">
-            Location: Remote-friendly<br>
-            Available for: Full-time, Contract, Advising
-          </div>
-        </section>
-
-        <section class="card" style="margin-top:18px">
-          <h2>Resume</h2>
-          <p class="muted">A concise, role-focused resume is available on request. Add a public link here if you want recruiters to download directly.</p>
-          <a class="btn btn-secondary" href="#" aria-label="Download resume">Download resume</a>
-        </section>
-      </aside>
+    <!-- Gradient Mesh Background -->
+    <div class="gradient-mesh">
+        <div class="mesh-blob mesh-blob-1"></div>
+        <div class="mesh-blob mesh-blob-2"></div>
     </div>
 
-    <footer class="site-footer" role="contentinfo">
-      <div>© <span id="year"></span> Mojaddid Shashwoto — Built with focus on product & engineering.</div>
+    <!-- Preloader & Intro Sequence -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__logo" id="animated-logo">
+            <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="ms-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#00F0FF" />
+                        <stop offset="100%" stop-color="#8A2BE2" />
+                    </linearGradient>
+                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur stdDeviation="2" result="blur" />
+                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                    </filter>
+                </defs>
+                <!-- Cyber M -->
+                <path d="M 8 32 L 8 12 L 20 24 L 32 12 L 32 32" stroke="url(#ms-grad)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" filter="url(#glow)"/>
+                <!-- Geometric S -->
+                <path d="M 32 8 L 14 8 L 14 20 L 28 20 L 28 32 L 8 32" stroke="#111111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+            <span class="logo-text">MOJADDID SHASHWOTO</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="#hero" class="header__logo" id="header-logo-target">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 8 32 L 8 12 L 20 24 L 32 12 L 32 32" stroke="url(#ms-grad)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" filter="url(#glow)"/>
+                    <path d="M 32 8 L 14 8 L 14 20 L 28 20 L 28 32 L 8 32" stroke="#111111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">MOJADDID SHASHWOTO</span>
+            </a>
+            
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#capabilities" class="header__nav-link">Services</a></li>
+                    <li class="header__nav-item"><a href="#work" class="header__nav-link">Selected Work</a></li>
+                    <li class="header__nav-item"><a href="#perspective" class="header__nav-link">Perspective</a></li>
+                    <li class="header__nav-item"><a href="#connect" class="header__nav-link">Connect</a></li>
+                </ul>
+                <button class="header__hamburger" aria-label="Toggle Menu">
+                    <span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+
+        <!-- Section 2: Hero -->
+        <section id="hero" class="hero section">
+            <div class="container hero__container">
+                <div class="hero__content reveal">
+                    <h1 class="hero__headline">Don't just build a product. Architect an engine for growth.</h1>
+                    <p class="hero__sub-headline">I transform complex business strategy into high-performance digital ecosystems. From high-fidelity prototyping to unit economics modeling, I bridge the gap between abstract vision and market-ready execution.</p>
+                    <a href="#connect" class="btn btn--primary magnetic">Discuss Your Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Core Capabilities -->
+        <section id="capabilities" class="capabilities section">
+            <div class="container capabilities__container">
+                <div class="capabilities__grid">
+
+                    <article class="capability reveal">
+                        <span class="capability__number">01</span>
+                        <h3 class="capability__title">Strategic Product Architecture</h3>
+                        <p class="capability__desc">Business modeling, Go-to-Market strategies, and product-led growth frameworks engineered for scale.</p>
+                    </article>
+
+                    <article class="capability reveal delay-1">
+                        <span class="capability__number">02</span>
+                        <h3 class="capability__title">High-Fidelity Prototyping</h3>
+                        <p class="capability__desc">Transforming complex requirements into interactive, user-tested Figma prototypes ready for developer handoff.</p>
+                    </article>
+
+                    <article class="capability reveal delay-2">
+                        <span class="capability__number">03</span>
+                        <h3 class="capability__title">Market & Financial Analysis</h3>
+                        <p class="capability__desc">Rigorous competitive benchmarking, unit economics modeling, and data-driven feature prioritization.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Selected Engagements (Case Studies) -->
+        <section id="work" class="work section">
+            <div class="container">
+                <h2 class="section-title reveal">Selected Engagements</h2>
+
+                <div class="work__list">
+
+                    <article class="case-study reveal">
+                        <div class="case-study__visual">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="AuraWealth Dashboard" class="case-study__img" loading="lazy" width="1200" height="675">
+                        </div>
+                        <div class="case-study__content">
+                            <span class="case-study__category">FinTech Strategy & UX</span>
+                            <h3 class="case-study__title">AuraWealth</h3>
+                            <p class="case-study__desc">Designed a high-fidelity dashboard and architected the integration of Gemini Pro API to provide real-time, predictive asset management insights for retail investors.</p>
+                            <button class="btn btn--outline case-study__btn magnetic" data-index="0">Read Full Case Study</button>
+                        </div>
+                    </article>
+
+                    <article class="case-study reveal">
+                        <div class="case-study__visual">
+                            <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&w=1200&q=80" alt="NexusFlow Figma Prototype" class="case-study__img" loading="lazy" width="1200" height="675">
+                        </div>
+                        <div class="case-study__content">
+                            <span class="case-study__category">B2B SaaS Prototyping</span>
+                            <h3 class="case-study__title">NexusFlow</h3>
+                            <p class="case-study__desc">Developed the core user journey maps and an interactive Figma prototype for a remote-first ERP system, minimizing user friction during complex data-entry workflows.</p>
+                            <button class="btn btn--outline case-study__btn magnetic" data-index="1">Read Full Case Study</button>
+                        </div>
+                    </article>
+
+                    <article class="case-study reveal">
+                        <div class="case-study__visual">
+                            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80" alt="OmniMarket Data Analysis" class="case-study__img" loading="lazy" width="1200" height="675">
+                        </div>
+                        <div class="case-study__content">
+                            <span class="case-study__category">Business Analysis</span>
+                            <h3 class="case-study__title">OmniMarket</h3>
+                            <p class="case-study__desc">Conducted exhaustive competitive benchmarking and modeled financial viability for a unified e-commerce gateway, utilizing Supabase for initial data scaffolding.</p>
+                            <button class="btn btn--outline case-study__btn magnetic" data-index="2">Read Full Case Study</button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Perspective & Background -->
+        <section id="perspective" class="perspective section">
+            <div class="container perspective__container reveal">
+                <!-- 40% Left Column: Visual & Facts -->
+                <div class="perspective__visual-col">
+                    <div class="perspective__portrait panel">
+                        <!-- High-quality minimalist cinematic portrait -->
+                        <img src="./profile.jpg" alt="Mojaddid Shashwoto Portrait" class="perspective__img" loading="lazy" width="800" height="1000">
+                    </div>
+                    <div class="perspective__facts panel">
+                        <div class="fact-item">
+                            <span class="fact-label">Focus</span>
+                            <span class="fact-value">B2B SaaS & Digital Ecosystems</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Approach</span>
+                            <span class="fact-value">Data-Driven Prototyping</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Base</span>
+                            <span class="fact-value">Dhaka, Bangladesh (Global Remote)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 60% Right Column: Narrative -->
+                <div class="perspective__narrative-col">
+                    <span class="perspective__overline">THE PERSPECTIVE</span>
+                    <h2 class="perspective__headline">Bridging the gap between commercial viability and digital execution.</h2>
+                    <div class="perspective__body">
+                        <p>I operate at the precise intersection of business strategy and technological innovation. I ensure that every digital product solves a tangible market problem and drives sustainable growth.</p>
+                        <p>Currently pursuing a BBA at East West University, I leverage my academic focus on market dynamics and financial modeling as a strategic asset. This foundation allows me to analyze markets critically and architect user experiences that are both beautiful and economically viable.</p>
+                        <p>I don't just build apps; I architect comprehensive digital ecosystems. From rapid wireframing to high-fidelity Figma prototypes, I specialize in transforming abstract commercial visions into executable digital realities.</p>
+                    </div>
+                    <div class="perspective__signature">
+                        Mojaddid Shashwoto
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Section 6: Footer -->
+    <footer id="connect" class="footer section">
+        <div class="container footer__container reveal">
+            <div class="footer__lead">
+                <h2 class="footer__headline">Ready to scale?</h2>
+                <p class="footer__sub-headline">Start the conversation by filling out the discovery questionnaire below.</p>
+                
+                <div class="discovery-wrapper">
+                    <div class="discovery-header">
+                        <div class="discovery-progress">
+                            <div class="discovery-progress-fill" id="progress-fill"></div>
+                        </div>
+                        <span class="discovery-step-indicator" id="step-indicator">Step 1 of 3</span>
+                    </div>
+
+                    <form id="discovery-form" action="https://api.web3forms.com/submit" method="POST" class="discovery-form">
+                        <!-- Replace with your actual Web3Forms access key -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        
+                        <!-- Step 1 -->
+                        <div class="discovery-step active" data-step="1">
+                            <h3 class="discovery-question">What is the primary focus of your project?</h3>
+                            <div class="discovery-grid">
+                                <label class="discovery-card">
+                                    <input type="radio" name="focus" value="B2B SaaS Strategy & Financial Modeling" required>
+                                    <div class="discovery-card-content">
+                                        <span class="discovery-card-title">B2B SaaS Strategy & Financial Modeling</span>
+                                    </div>
+                                </label>
+                                <label class="discovery-card">
+                                    <input type="radio" name="focus" value="Rapid App Prototyping & UX Design">
+                                    <div class="discovery-card-content">
+                                        <span class="discovery-card-title">Rapid App Prototyping & UX Design</span>
+                                    </div>
+                                </label>
+                                <label class="discovery-card">
+                                    <input type="radio" name="focus" value="Comprehensive Market & Business Analysis">
+                                    <div class="discovery-card-content">
+                                        <span class="discovery-card-title">Comprehensive Market & Business Analysis</span>
+                                    </div>
+                                </label>
+                                <label class="discovery-card">
+                                    <input type="radio" name="focus" value="Custom Digital Ecosystem Architecture">
+                                    <div class="discovery-card-content">
+                                        <span class="discovery-card-title">Custom Digital Ecosystem Architecture</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="discovery-actions">
+                                <span class="discovery-error" id="error-step-1">Please select an option to continue.</span>
+                                <button type="button" class="btn btn--primary discovery-next">Next Step</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="discovery-step" data-step="2">
+                            <h3 class="discovery-question">Where are you currently at in your journey?</h3>
+                            <div class="discovery-grid">
+                                <label class="discovery-card">
+                                    <input type="radio" name="stage" value="Raw Concept" required>
+                                    <div class="discovery-card-content">
+                                        <span class="discovery-card-title">Raw Concept</span>
+                                        <span class="discovery-card-desc">Need validation and architecture</span>
+                                    </div>
+                                </label>
+                                <label class="discovery-card">
+                                    <input type="radio" name="stage" value="Initial Wireframes">
+                                    <div class="discovery-card-content">
+                                        <span class="discovery-card-title">Initial Wireframes</span>
+                                        <span class="discovery-card-desc">Need high-fidelity prototypes like Figma</span>
+                                    </div>
+                                </label>
+                                <label class="discovery-card">
+                                    <input type="radio" name="stage" value="Data Gathered">
+                                    <div class="discovery-card-content">
+                                        <span class="discovery-card-title">Data Gathered</span>
+                                        <span class="discovery-card-desc">Need strategic dashboards or analytics integration</span>
+                                    </div>
+                                </label>
+                                <label class="discovery-card">
+                                    <input type="radio" name="stage" value="Ready for Development">
+                                    <div class="discovery-card-content">
+                                        <span class="discovery-card-title">Ready for Development</span>
+                                        <span class="discovery-card-desc">Need developer handoff preparation</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="discovery-actions">
+                                <button type="button" class="btn btn--outline discovery-prev">Back</button>
+                                <div class="discovery-actions-right">
+                                    <span class="discovery-error" id="error-step-2">Please select an option to continue.</span>
+                                    <button type="button" class="btn btn--primary discovery-next">Next Step</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="discovery-step" data-step="3">
+                            <h3 class="discovery-question">Tell me a bit more about the vision.</h3>
+                            <div class="discovery-inputs">
+                                <div class="input-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                                </div>
+                                <div class="input-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@company.com">
+                                </div>
+                                <div class="input-group input-group--full">
+                                    <label for="message">Project Brief</label>
+                                    <textarea id="message" name="message" required rows="4" placeholder="Briefly describe your goals and timelines..."></textarea>
+                                </div>
+                            </div>
+                            <div class="discovery-actions">
+                                <button type="button" class="btn btn--outline discovery-prev">Back</button>
+                                <div class="discovery-actions-right">
+                                    <span class="discovery-error" id="error-step-3">Please fill out all required fields.</span>
+                                    <button type="submit" class="btn btn--primary magnetic">Initiate Project Discussion</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__socials">
+                    <a href="#" class="social-icon magnetic" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon magnetic" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer__copy">
+                    &copy; 2026 Mojaddid Shashwoto. Dhaka, Bangladesh.
+                </div>
+            </div>
+        </div>
     </footer>
-  </div>
-google-site-verification=0MH3hFtOCd-sfpfqhNwfyfKYJbXk4o7VRQyD6bFtQ_0
-  <script>
-    // Accessibility: set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
+    <!-- Deep-Dive Modal System -->
+    <div class="modal" id="project-modal" aria-hidden="true">
+        <div class="modal__overlay" id="modal-overlay" tabindex="-1"></div>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+                <h2 class="modal__title">LensHire: B2B SaaS Strategy</h2>
+                <button class="modal__close" id="modal-close" aria-label="Close modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </header>
+            
+            <div class="modal__body">
+                <div class="modal__hero">
+                    <img src="https://images.unsplash.com/photo-1497215848510-7058becc2a80?auto=format&fit=crop&w=1200&q=80" alt="LensHire Hero Image" class="modal__hero-img">
+                </div>
+                
+                <div class="modal__grid">
+                    <div class="modal__col modal__col--left">
+                        <h3 class="modal__subtitle">The Challenge</h3>
+                        <p class="modal__text" id="modal-challenge">The Bangladeshi creative industry lacks a centralized, trust-verified platform for high-end camera and lighting equipment rentals.</p>
+                        
+                        <h3 class="modal__subtitle">The Solution</h3>
+                        <p class="modal__text" id="modal-solution">Developed a comprehensive Go-to-Market strategy and wireframed a peer-to-peer SaaS marketplace with integrated vendor verification and dynamic pricing models.</p>
+                    </div>
+                    
+                    <div class="modal__col modal__col--right">
+                        <h3 class="modal__subtitle">Deliverables</h3>
+                        <ul class="modal__list" id="modal-deliverables">
+                            <li>Financial Modeling</li>
+                            <li>User Journey Mapping</li>
+                            <li>Figma Wireframes</li>
+                        </ul>
+                        
+                        <h3 class="modal__subtitle">Tech/Tools Analyzed</h3>
+                        <ul class="modal__list" id="modal-tech">
+                            <li>Stripe Connect</li>
+                            <li>Supabase</li>
+                            <li>Gemini API</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="modal__footer">
+                <a href="#connect" class="btn btn--primary modal__cta magnetic" id="modal-cta-btn">Discuss a Similar Project</a>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js?v=1.1"></script>
 </body>
+
 </html>
